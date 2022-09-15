@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/firstName"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="fill_parent"
     android:background="@color/white"
     android:backgroundTint="#FFFFFF"
     tools:context=".register">
@@ -20,20 +20,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="500dp"
+        android:id="@+id/scrollview"
+        android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/register"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <EditText
                 android:id="@+id/FirstName"
-                android:maxLines="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
@@ -42,10 +45,13 @@
                 android:background="@drawable/background"
                 android:drawableStart="@drawable/name"
                 android:drawablePadding="10dp"
-                android:lines="1"
-                android:textColor="#42AE23"
                 android:hint="FirstName"
+                android:maxLength="15"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLines="1"
                 android:padding="10dp"
+                android:textColor="#42AE23"
 
                 android:textColorHighlight="#0E0E0E"
                 android:textColorHint="#42AE23"
@@ -64,10 +70,12 @@
                 android:background="@drawable/background"
                 android:drawableStart="@drawable/name"
                 android:drawablePadding="10dp"
-                android:lines="1"
-                android:textColor="#42AE23"
+                android:maxLength="15"
+                android:inputType="text"
                 android:hint="SecondName"
+                android:lines="1"
                 android:padding="10dp"
+                android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
                 android:textColorHint="#42AE23"
                 android:textColorLink="#79A61D"
@@ -76,28 +84,31 @@
                 app:layout_constraintTop_toBottomOf="@+id/FirstName" />
 
             <EditText
-                android:lines="1"
-                android:textColor="#42AE23"
                 android:id="@+id/ThirdName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="16dp"
+                android:maxLength="15"
+                android:inputType="text"
                 android:layout_marginEnd="40dp"
                 android:background="@drawable/background"
                 android:drawableStart="@drawable/name"
                 android:drawablePadding="10dp"
                 android:hint="ThirdName"
+                android:lines="1"
                 android:padding="10dp"
+                android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
                 android:textColorHint="#42AE23"
                 android:textColorLink="#79A61D"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/SecondName" />
+
             <EditText
-                android:lines="1"
-                android:textColor="#42AE23"
+                android:maxLength="9"
+                android:inputType="number"
                 android:id="@+id/Id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -108,39 +119,47 @@
                 android:drawableStart="@drawable/id"
                 android:drawablePadding="10dp"
                 android:hint="Id Number"
+                android:lines="1"
                 android:padding="10dp"
+                android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
                 android:textColorHint="#42AE23"
                 android:textColorLink="#79A61D"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ThirdName" />
+
             <EditText
-                android:lines="1"
-                android:textColor="#42AE23"
                 android:id="@+id/PhoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="40dp"
+                android:maxLength="15"
+                android:inputType="phone"
                 android:background="@drawable/background"
                 android:drawableStart="@drawable/phone"
                 android:drawablePadding="10dp"
                 android:hint="Phone Number"
+                android:lines="1"
                 android:padding="10dp"
+                android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
                 android:textColorHint="#42AE23"
                 android:textColorLink="#79A61D"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Id" />
+
             <Spinner
 
                 android:id="@+id/schoolsSpinner"
                 android:layout_width="322dp"
                 android:layout_height="40dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
                 android:background="@drawable/background"
                 android:focusable="auto"
                 android:labelFor="@id/Id"
@@ -153,6 +172,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/PhoneNumber"
                 tools:listitem="Courses" />
+
             <Spinner
 
                 android:id="@+id/coursesSpinner"
@@ -189,31 +209,175 @@
                 app:layout_constraintTop_toTopOf="@+id/register" />
 
 
-<!--            <EditText-->
-<!--                android:id="@+id/PhoneNumber2"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="40dp"-->
-<!--                android:layout_marginTop="16dp"-->
-<!--                android:layout_marginEnd="40dp"-->
-<!--                android:background="@drawable/background"-->
-<!--                android:drawableStart="@drawable/phone"-->
-<!--                android:drawablePadding="10dp"-->
-<!--                android:hint="Phone Number"-->
-<!--                android:lines="1"-->
-<!--                android:textColor="#42AE23"-->
-<!--                android:padding="10dp"-->
-<!--                android:textColorHighlight="#0E0E0E"-->
-<!--                android:textColorHint="#42AE23"-->
-<!--                android:textColorLink="#79A61D"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/coursesSpinner" />-->
-<!--           -->
+            <EditText
+                android:id="@+id/FathersName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/background"
+                android:drawableStart="@drawable/father"
+                android:maxLength="35"
+                android:inputType="text"
+                android:drawablePadding="10dp"
+                android:hint="FathersNames"
+                android:lines="1"
+                android:padding="10dp"
+                android:textColor="#42AE23"
+                android:textColorHighlight="#0E0E0E"
+                android:textColorHint="#42AE23"
+                android:textColorLink="#79A61D"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/coursesSpinner" />
+            <!--           -->
 
+            <EditText
+                android:id="@+id/MothersName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/background"
+                android:maxLength="35"
+                android:inputType="text"
+                android:drawableStart="@drawable/father"
+                android:drawablePadding="10dp"
+                android:hint="MothersNames"
+                android:lines="1"
+                android:padding="10dp"
+                android:textColor="#42AE23"
+                android:textColorHighlight="#0E0E0E"
+                android:textColorHint="#42AE23"
+                android:textColorLink="#79A61D"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/FathersName" />
 
+            <EditText
+                android:id="@+id/FathersPhone"
+                android:maxLength="15"
+                android:inputType="phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/background"
+                android:drawableStart="@drawable/phone"
+                android:drawablePadding="10dp"
+                android:hint="FathersPhone"
+                android:lines="1"
+                android:padding="10dp"
+                android:textColor="#42AE23"
+                android:textColorHighlight="#0E0E0E"
+                android:textColorHint="#42AE23"
+                android:textColorLink="#79A61D"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/MothersName" />
+
+            <EditText
+                android:id="@+id/MothersPhone"
+                android:maxLength="15"
+                android:inputType="phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/background"
+                android:drawableStart="@drawable/phone"
+                android:drawablePadding="10dp"
+                android:hint="MothersPhone"
+                android:lines="1"
+                android:padding="10dp"
+                android:textColor="#42AE23"
+                android:textColorHighlight="#0E0E0E"
+                android:textColorHint="#42AE23"
+                android:textColorLink="#79A61D"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/FathersPhone" />
+
+            <Spinner
+
+                android:id="@+id/countySpinner"
+                android:layout_width="322dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background"
+                android:focusable="auto"
+                android:labelFor="@id/Id"
+                android:layerType="none"
+                android:popupBackground="@color/green"
+                android:popupTheme="@color/green"
+                android:spinnerMode="dropdown"
+                android:tag="Course"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/MothersPhone"
+                tools:listitem="Courses" />
+
+            <EditText
+                android:id="@+id/Email"
+                android:maxLength="15"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/background"
+                android:drawableStart="@drawable/email"
+                android:drawablePadding="10dp"
+                android:hint="email"
+                android:lines="1"
+                android:padding="10dp"
+                android:textColor="#42AE23"
+                android:textColorHighlight="#0E0E0E"
+                android:textColorHint="#42AE23"
+                android:textColorLink="#79A61D"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/countySpinner" />
+            <EditText
+                android:id="@+id/password"
+                android:maxLength="15"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/background"
+                android:drawableStart="@drawable/password"
+                android:drawablePadding="10dp"
+                android:hint="Passwword"
+                android:lines="1"
+                android:padding="10dp"
+                android:textColor="#42AE23"
+                android:textColorHighlight="#0E0E0E"
+                android:textColorHint="#42AE23"
+                android:textColorLink="#79A61D"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Email" />
 
             app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <Button
+        android:layout_width="322dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:width="300dp"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollview" />
 </androidx.constraintlayout.widget.ConstraintLayout>
