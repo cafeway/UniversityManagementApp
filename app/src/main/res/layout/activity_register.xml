@@ -33,6 +33,7 @@
 
             <EditText
                 android:id="@+id/FirstName"
+                android:maxLines="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
@@ -134,18 +135,42 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Id" />
-
             <Spinner
 
-                tools:listitem="Courses"
-                android:background="@color/green"
-                android:id="@+id/coursesSpinner"
+                android:id="@+id/schoolsSpinner"
                 android:layout_width="322dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginTop="20dp"
+                android:background="@drawable/background"
+                android:focusable="auto"
+                android:labelFor="@id/Id"
+                android:layerType="none"
+                android:popupBackground="@color/green"
+                android:popupTheme="@color/green"
+                android:spinnerMode="dropdown"
+                android:tag="Course"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PhoneNumber" />
+                app:layout_constraintTop_toBottomOf="@+id/PhoneNumber"
+                tools:listitem="Courses" />
+            <Spinner
+
+                android:id="@+id/coursesSpinner"
+                android:layout_width="322dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background"
+                android:focusable="auto"
+                android:labelFor="@id/Id"
+                android:layerType="none"
+                android:popupBackground="@color/green"
+                android:popupTheme="@color/green"
+                android:spinnerMode="dropdown"
+                android:tag="Course"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/schoolsSpinner"
+                tools:listitem="Courses" />
 
 
             <TextView

@@ -19,17 +19,30 @@ class regisiter : AppCompatActivity() {
 
       setContentView(R.layout.activity_register)
 
-        // instantiate the spinner using id
+        // courses spinnes
         val spinner = findViewById<Spinner>(R.id.coursesSpinner)
 
+        //schools spinner
+        val schools_spinner = findViewById<Spinner>(R.id.schoolsSpinner)
 
-        // creating a spinner apater to display options
+
+
+        // creating a spinner adapater to show a list  courses options as options
         ArrayAdapter.createFromResource(
             this,R.array.courses,
             android.R.layout.simple_spinner_item
         ).also {
             adapter-> adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinner.adapter = adapter
+        }
+
+        // creating a spinner adapaters show a list of schools as options
+        ArrayAdapter.createFromResource(
+            this,R.array.schools,
+            android.R.layout.simple_spinner_item
+        ).also {
+                adapter-> adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            schools_spinner.adapter = adapter
         }
     }
 

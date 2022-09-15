@@ -21,4 +21,13 @@
         <item>Engineering</item>
         <item>Law</item>
     </string-array>
+    <string-array name="schools">
+        <item>School of Technology</item>
+        <item> School of Education</item>
+        <item>School of Business</item>
+        <item>School of Medicine</item>
+        <item>School  of Catering</item>
+        <item>School of Engineering</item>
+        <item>School of Law</item>
+    </string-array>
 </resources>
