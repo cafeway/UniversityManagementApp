@@ -33,10 +33,10 @@
     <string-array name="County">
         <item>Male</item>
         <item>Female</item>
-<!--        <item>Nakuru</item>-->
-<!--        <item>Kisumu</item>-->
-<!--        <item>Kitui</item>-->
-<!--        <item>Mombasa</item>-->
-<!--        <item>Kakaamega</item>-->
+        <!--        <item>Nakuru</item>-->
+        <!--        <item>Kisumu</item>-->
+        <!--        <item>Kitui</item>-->
+        <!--        <item>Mombasa</item>-->
+        <!--        <item>Kakaamega</item>-->
     </string-array>
 </resources>

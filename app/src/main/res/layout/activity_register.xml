@@ -31,9 +31,34 @@
         app:layout_constraintTop_toBottomOf="@+id/logo">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/register"
+            android:id="@+id/registerButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/RegNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/background"
+                android:drawableStart="@drawable/name"
+                android:drawablePadding="10dp"
+                android:hint="RegNo"
+                android:maxLength="15"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="#42AE23"
+
+                android:textColorHighlight="#0E0E0E"
+                android:textColorHint="#42AE23"
+                android:textColorLink="#79A61D"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/WelcomeText" />
 
             <EditText
                 android:id="@+id/FirstName"
@@ -58,7 +83,7 @@
                 android:textColorLink="#79A61D"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/WelcomeText" />
+                app:layout_constraintTop_toBottomOf="@+id/RegNo" />
 
             <EditText
                 android:id="@+id/SecondName"
@@ -137,7 +162,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="40dp"
                 android:maxLength="15"
-                android:inputType="phone"
+                android:inputType="text"
                 android:background="@drawable/background"
                 android:drawableStart="@drawable/phone"
                 android:drawablePadding="10dp"
@@ -206,7 +231,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/register" />
+                app:layout_constraintTop_toTopOf="@+id/registerButton" />
 
 
             <EditText
@@ -259,7 +284,7 @@
             <EditText
                 android:id="@+id/FathersPhone"
                 android:maxLength="15"
-                android:inputType="phone"
+                android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
@@ -282,7 +307,7 @@
             <EditText
                 android:id="@+id/MothersPhone"
                 android:maxLength="15"
-                android:inputType="phone"
+                android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
@@ -371,11 +396,13 @@
     </ScrollView>
 
     <Button
+        android:id="@+id/register"
         android:layout_width="322dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:width="300dp"
+        android:clickable="true"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

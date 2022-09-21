@@ -31,7 +31,7 @@ class HomeScreen : AppCompatActivity() {
             val intent = Intent(this,regisiter::class.java).apply {
 
             }
-            startActivity(intent)
+                startActivity(intent)
         }
     }
 
