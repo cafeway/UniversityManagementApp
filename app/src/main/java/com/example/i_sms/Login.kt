@@ -6,8 +6,11 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.ui.AppBarConfiguration
+import com.example.i_sms.api.Auth
+import com.example.i_sms.errors.Reg_error
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -20,15 +23,24 @@ class Login : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
+        val actionBar = supportActionBar
+        actionBar?.hide()
         // Login button
         val loginButton = findViewById<Button>(R.id.button)
 
         // click listener
         loginButton.setOnClickListener() {
             login()
+        }
+
+        // Redirect to create Account Activity
+        val text = findViewById<TextView>(R.id.textView6)
+        text.setOnClickListener{
+            val intent = Intent(applicationContext,regisiter::class.java)
+            startActivity(intent)
         }
     }
 
@@ -49,12 +61,12 @@ class Login : AppCompatActivity() {
             .build()
 
         // Create Service
-        val service = retrofit.create(AuthenicationInterface::class.java)
+        val service = retrofit.create(Auth::class.java)
 
         // Launch an asynchrounous operation using co-routines
         CoroutineScope(Dispatchers.IO).launch {
             // Perform The post Request and get a response
-            val response = service.login(loginModel)
+            val response = service.Login(loginModel)
             withContext(Dispatchers.Main){
                 // Test if the respsonce was successfull
                 if (response.isSuccessful){
@@ -63,7 +75,7 @@ class Login : AppCompatActivity() {
                     Log.d("Success","$body")
 //                     convert the json response obtained to gson and cast to a model
                     val gson = Gson()
-                    val bodyGson = gson.fromJson(body,Reg_error::class.java)
+                    val bodyGson = gson.fromJson(body, Reg_error::class.java)
 
                     Log.d("bodyJson", bodyGson.Field.toString())
 
@@ -75,12 +87,10 @@ class Login : AppCompatActivity() {
                         "Password"->PasswordField.setError(bodyGson.Error[0])
                         "Success"->{
                             Toast.makeText(applicationContext, "Login was successful", Toast.LENGTH_LONG).show()
-                            val intent = Intent(applicationContext, MainActivity::class.java)
-                            val intent2 = Intent(applicationContext,EmployeeDash::class.java)
-                            if (bodyGson.Error[0] == "employee")
+                            val intent = Intent(applicationContext, HomeScreen::class.java)
+//                            val intent2 = Intent(applicationContext,EmployeeDash::class.java)
+                            if (bodyGson.Error[0] == "student")
                             {
-                                startActivity(intent2)
-                            } else {
                                 startActivity(intent)
                             }
 

@@ -4,31 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/firstName"
     android:layout_width="match_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="match_parent"
     android:background="@color/white"
     android:backgroundTint="#FFFFFF"
     tools:context=".register">
 
 
-    <ImageView
-
-        android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
+        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo">
+        tools:layout_editor_absoluteY="235dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/registerButton"
@@ -46,9 +36,9 @@
                 android:drawableStart="@drawable/name"
                 android:drawablePadding="10dp"
                 android:hint="RegNo"
-                android:maxLength="15"
                 android:inputType="text"
                 android:lines="1"
+                android:maxLength="15"
                 android:maxLines="1"
                 android:padding="10dp"
                 android:textColor="#42AE23"
@@ -71,9 +61,9 @@
                 android:drawableStart="@drawable/name"
                 android:drawablePadding="10dp"
                 android:hint="FirstName"
-                android:maxLength="15"
                 android:inputType="text"
                 android:lines="1"
+                android:maxLength="15"
                 android:maxLines="1"
                 android:padding="10dp"
                 android:textColor="#42AE23"
@@ -95,10 +85,10 @@
                 android:background="@drawable/background"
                 android:drawableStart="@drawable/name"
                 android:drawablePadding="10dp"
-                android:maxLength="15"
-                android:inputType="text"
                 android:hint="SecondName"
+                android:inputType="text"
                 android:lines="1"
+                android:maxLength="15"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -114,14 +104,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="16dp"
-                android:maxLength="15"
-                android:inputType="text"
                 android:layout_marginEnd="40dp"
                 android:background="@drawable/background"
                 android:drawableStart="@drawable/name"
                 android:drawablePadding="10dp"
                 android:hint="ThirdName"
+                android:inputType="text"
                 android:lines="1"
+                android:maxLength="15"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -132,8 +122,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/SecondName" />
 
             <EditText
-                android:maxLength="9"
-                android:inputType="number"
                 android:id="@+id/Id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -144,7 +132,9 @@
                 android:drawableStart="@drawable/id"
                 android:drawablePadding="10dp"
                 android:hint="Id Number"
+                android:inputType="number"
                 android:lines="1"
+                android:maxLength="9"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -161,13 +151,13 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="40dp"
-                android:maxLength="15"
-                android:inputType="text"
                 android:background="@drawable/background"
                 android:drawableStart="@drawable/phone"
                 android:drawablePadding="10dp"
                 android:hint="Phone Number"
+                android:inputType="text"
                 android:lines="1"
+                android:maxLength="15"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -243,11 +233,11 @@
                 android:layout_marginEnd="40dp"
                 android:background="@drawable/background"
                 android:drawableStart="@drawable/father"
-                android:maxLength="35"
-                android:inputType="text"
                 android:drawablePadding="10dp"
                 android:hint="FathersNames"
+                android:inputType="text"
                 android:lines="1"
+                android:maxLength="35"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -266,12 +256,12 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="40dp"
                 android:background="@drawable/background"
-                android:maxLength="35"
-                android:inputType="text"
                 android:drawableStart="@drawable/father"
                 android:drawablePadding="10dp"
                 android:hint="MothersNames"
+                android:inputType="text"
                 android:lines="1"
+                android:maxLength="35"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -283,8 +273,6 @@
 
             <EditText
                 android:id="@+id/FathersPhone"
-                android:maxLength="15"
-                android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
@@ -294,7 +282,9 @@
                 android:drawableStart="@drawable/phone"
                 android:drawablePadding="10dp"
                 android:hint="FathersPhone"
+                android:inputType="text"
                 android:lines="1"
+                android:maxLength="15"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -306,8 +296,6 @@
 
             <EditText
                 android:id="@+id/MothersPhone"
-                android:maxLength="15"
-                android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
@@ -317,7 +305,9 @@
                 android:drawableStart="@drawable/phone"
                 android:drawablePadding="10dp"
                 android:hint="MothersPhone"
+                android:inputType="text"
                 android:lines="1"
+                android:maxLength="15"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -348,8 +338,6 @@
 
             <EditText
                 android:id="@+id/Email"
-                android:maxLength="15"
-                android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
@@ -359,7 +347,9 @@
                 android:drawableStart="@drawable/email"
                 android:drawablePadding="10dp"
                 android:hint="email"
+                android:inputType="textEmailAddress"
                 android:lines="1"
+                android:maxLength="15"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -368,10 +358,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/countySpinner" />
+
             <EditText
                 android:id="@+id/password"
-                android:maxLength="15"
-                android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
@@ -381,7 +370,9 @@
                 android:drawableStart="@drawable/password"
                 android:drawablePadding="10dp"
                 android:hint="Passwword"
+                android:inputType="textPassword"
                 android:lines="1"
+                android:maxLength="15"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -390,21 +381,21 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Email" />
-
+            <Button
+                android:id="@+id/register"
+                android:layout_width="322dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:width="300dp"
+                android:clickable="true"
+                android:text="Register"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/password" />
             app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/register"
-        android:layout_width="322dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:width="300dp"
-        android:clickable="true"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scrollview" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
