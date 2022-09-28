@@ -40,15 +40,17 @@
                 android:lines="1"
                 android:maxLength="15"
                 android:maxLines="1"
+                android:minHeight="48dp"
                 android:padding="10dp"
-                android:textColor="#42AE23"
 
+                android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
                 android:textColorHint="#42AE23"
                 android:textColorLink="#79A61D"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/WelcomeText" />
+                app:layout_constraintTop_toBottomOf="@+id/WelcomeText"
+                android:autofillHints="" />
 
             <EditText
                 android:id="@+id/FirstName"
@@ -65,9 +67,10 @@
                 android:lines="1"
                 android:maxLength="15"
                 android:maxLines="1"
+                android:minHeight="48dp"
                 android:padding="10dp"
-                android:textColor="#42AE23"
 
+                android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
                 android:textColorHint="#42AE23"
                 android:textColorLink="#79A61D"
@@ -89,6 +92,7 @@
                 android:inputType="text"
                 android:lines="1"
                 android:maxLength="15"
+                android:minHeight="48dp"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -112,6 +116,7 @@
                 android:inputType="text"
                 android:lines="1"
                 android:maxLength="15"
+                android:minHeight="48dp"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -135,6 +140,7 @@
                 android:inputType="number"
                 android:lines="1"
                 android:maxLength="9"
+                android:minHeight="48dp"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -142,7 +148,8 @@
                 android:textColorLink="#79A61D"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ThirdName" />
+                app:layout_constraintTop_toBottomOf="@+id/ThirdName"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <EditText
                 android:id="@+id/PhoneNumber"
@@ -158,6 +165,7 @@
                 android:inputType="text"
                 android:lines="1"
                 android:maxLength="15"
+                android:minHeight="48dp"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -238,6 +246,7 @@
                 android:inputType="text"
                 android:lines="1"
                 android:maxLength="35"
+                android:minHeight="48dp"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -245,7 +254,8 @@
                 android:textColorLink="#79A61D"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/coursesSpinner" />
+                app:layout_constraintTop_toBottomOf="@+id/coursesSpinner"
+                android:autofillHints="" />
             <!--           -->
 
             <EditText
@@ -262,6 +272,7 @@
                 android:inputType="text"
                 android:lines="1"
                 android:maxLength="35"
+                android:minHeight="48dp"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -269,7 +280,8 @@
                 android:textColorLink="#79A61D"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/FathersName" />
+                app:layout_constraintTop_toBottomOf="@+id/FathersName"
+                android:autofillHints="" />
 
             <EditText
                 android:id="@+id/FathersPhone"
@@ -285,6 +297,7 @@
                 android:inputType="text"
                 android:lines="1"
                 android:maxLength="15"
+                android:minHeight="48dp"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -304,7 +317,7 @@
                 android:background="@drawable/background"
                 android:drawableStart="@drawable/phone"
                 android:drawablePadding="10dp"
-                android:hint="MothersPhone"
+                android:hint="@string/mothersphone"
                 android:inputType="text"
                 android:lines="1"
                 android:maxLength="15"
@@ -315,7 +328,8 @@
                 android:textColorLink="#79A61D"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/FathersPhone" />
+                app:layout_constraintTop_toBottomOf="@+id/FathersPhone"
+                android:autofillHints="" />
 
             <Spinner
 
@@ -347,9 +361,9 @@
                 android:drawableStart="@drawable/email"
                 android:drawablePadding="10dp"
                 android:hint="email"
-                android:inputType="textEmailAddress"
+                android:inputType="text"
                 android:lines="1"
-                android:maxLength="15"
+                android:maxLength="30"
                 android:padding="10dp"
                 android:textColor="#42AE23"
                 android:textColorHighlight="#0E0E0E"
@@ -357,7 +371,8 @@
                 android:textColorLink="#79A61D"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/countySpinner" />
+                app:layout_constraintTop_toBottomOf="@+id/countySpinner"
+                android:autofillHints="" />
 
             <EditText
                 android:id="@+id/password"
@@ -366,11 +381,12 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="40dp"
+                android:autofillHints=""
                 android:background="@drawable/background"
                 android:drawableStart="@drawable/password"
                 android:drawablePadding="10dp"
-                android:hint="Passwword"
-                android:inputType="textPassword"
+                android:hint="Password"
+                android:inputType="text"
                 android:lines="1"
                 android:maxLength="15"
                 android:padding="10dp"

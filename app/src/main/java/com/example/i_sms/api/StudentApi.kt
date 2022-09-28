@@ -12,6 +12,6 @@ interface StudentApi {
     @GET("https://i-sms.herokuapp.com/api/students/show")
     suspend fun getStudents (): Response<List<Student>>
 
-    @POST("https://i-sms.herokuapp.com/api/students")
+    @POST("http://10.0.2.2:8000/api/students")
     suspend fun registerStudent(@Body student: Student): Response<ResponseBody>
 }

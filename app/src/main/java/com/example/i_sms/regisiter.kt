@@ -126,6 +126,7 @@ class regisiter : AppCompatActivity() {
         val service = retrofit.create(StudentApi::class.java)
 
 
+        // Get data from fields
         val reg = findViewById<EditText>(R.id.RegNo)
         val FirstName = findViewById<EditText>(R.id.FirstName)
         val SecondName = findViewById<EditText>(R.id.SecondName)
@@ -154,6 +155,7 @@ class regisiter : AppCompatActivity() {
             FathersName.text.toString(),
             MothersName.text.toString(),
             Gender.selectedItem.toString(),
+            Ema
 
         )
 
@@ -201,7 +203,7 @@ class regisiter : AppCompatActivity() {
 
                 } else {
 
-                    Log.e("RETROFIT_ERROR", response.code().toString())
+                    response.body()?.let { Log.e("RETROFIT_ERROR", it.string()) }
 
                 }
             }
