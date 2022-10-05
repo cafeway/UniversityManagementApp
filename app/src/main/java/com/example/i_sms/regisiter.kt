@@ -2,34 +2,20 @@ package com.example.i_sms
 
 import android.app.Activity
 import android.os.Bundle
-import android.util.JsonToken
 import android.util.Log
 import android.view.View
 import android.widget.*
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.i_sms.api.StudentApi
-import com.example.i_sms.databinding.RegisiterBinding
 import com.example.i_sms.errors.Reg_error
+import com.example.i_sms.models.Student
 import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import com.google.gson.JsonObject
-import com.google.gson.JsonParser
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.json.JSONObject
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import okhttp3.RequestBody
-import okhttp3.ResponseBody
-import org.json.JSONTokener
-import java.lang.Integer.parseInt
 
 class regisiter : AppCompatActivity() {
 
@@ -140,6 +126,8 @@ class regisiter : AppCompatActivity() {
         val School = findViewById<Spinner>(R.id.schoolsSpinner)
         val Course = findViewById<Spinner>(R.id.coursesSpinner)
         val Gender = findViewById<Spinner>(R.id.countySpinner)
+        val Email = findViewById<EditText>(R.id.Email)
+        val Password = findViewById<EditText>(R.id.password)
         // Create JSON using JSONObject
         val student_object = Student(
             reg.text.toString(),
@@ -155,7 +143,8 @@ class regisiter : AppCompatActivity() {
             FathersName.text.toString(),
             MothersName.text.toString(),
             Gender.selectedItem.toString(),
-            Ema
+            Email.text.toString(),
+            Password.text.toString()
 
         )
 
@@ -192,6 +181,9 @@ class regisiter : AppCompatActivity() {
                         "MothersName"->MothersName.setError(b.Error[0])
                         "FathersPhone"->FathersPhone.setError(b.Error[0])
                         "MothersPhone"->MothersPhone.setError(b.Error[0])
+                        "Success"->{
+                            Toast.makeText(this@regisiter,"Your account was created successfully!",Toast.LENGTH_LONG).show()
+                        }
 
 
                     }

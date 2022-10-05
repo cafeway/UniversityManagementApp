@@ -2,13 +2,10 @@ package com.example.i_sms.api
 
 
 
-import com.example.i_sms.Model
-import com.example.i_sms.Student
-import okhttp3.RequestBody
+import com.example.i_sms.models.Model
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.Body
-import retrofit2.http.GET
 import retrofit2.http.POST
 
 

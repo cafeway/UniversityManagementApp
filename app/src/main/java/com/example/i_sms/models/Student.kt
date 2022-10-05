@@ -1,4 +1,4 @@
-package com.example.i_sms
+package com.example.i_sms.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -43,5 +43,12 @@ data class Student(
 
     @SerialName("gender")
     var Gender: String,
+
+    @SerialName("Email")
+    var Email: String,
+
+    @SerialName("Password")
+    var Password: String,
+
 
 )

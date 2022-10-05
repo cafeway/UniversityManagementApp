@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.navigation.ui.AppBarConfiguration
 import com.example.i_sms.api.Auth
 import com.example.i_sms.errors.Reg_error
+import com.example.i_sms.models.Model
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
