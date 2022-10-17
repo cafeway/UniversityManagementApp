@@ -12,8 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Isms">
         <activity
+            android:name=".students.ShowTimetable"
+            android:exported="false" />
+        <activity
+            android:name=".students.ShowUnits"
+            android:exported="false" />
+        <activity
             android:name=".Login"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,12 +51,10 @@
             android:name=".HomeScreen"
             android:exported="true"
             android:label="@string/title_activity_home_screen"
-            android:theme="@style/Theme.Isms.NoActionBar">
-        </activity>
+            android:theme="@style/Theme.Isms.NoActionBar" />
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

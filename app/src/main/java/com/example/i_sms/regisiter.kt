@@ -172,7 +172,7 @@ class regisiter : AppCompatActivity() {
                     when(b.Field)
                     {
                         "RegNo"->RegNo_.setError(b.Error[0])
-                        "FirstName"->FirstName_.setError(b.Error[0])
+                        "DriversId"->FirstName_.setError(b.Error[0])
                         "SecondName"->SecondName_.setError(b.Error[0])
                         "FathersName"->FathersName.setError(b.Error[0])
                         "LastName"->LastName.setError(b.Error[0])
