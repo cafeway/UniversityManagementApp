@@ -33,8 +33,8 @@ class HomeScreen : AppCompatActivity() {
         }
 
         //getting time table image
-        val academicsicon = findViewById<ImageView>(R.id.academcs_icon)
-        timeTableImage.setOnClickListener{
+        val academicicon = findViewById<ImageView>(R.id.academcs_icon)
+        academicicon.setOnClickListener{
             val intent = Intent(this,ShowUnits::class.java)
             startActivity(intent)
         }
