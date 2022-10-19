@@ -120,37 +120,39 @@
                             />
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/timeTableCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:elevation="10dp"
-                    android:layout_margin="20dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="10dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    >
+                    android:layout_margin="20dp"
+                    android:clickable="true"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:gravity="center"
-                        android:padding="16dp"
-                        >
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/acc"
-                            />
+                            android:src="@drawable/acc" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="accomodation"
-                            android:layout_marginTop="12dp"
-                            android:textAllCaps="true"
-                            android:textFontWeight="5"
                             android:layout_gravity="center"
-                            />
+                            android:layout_marginTop="12dp"
+                            android:text="Timetable"
+                            android:textAllCaps="true"
+                            android:textFontWeight="5" />
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView

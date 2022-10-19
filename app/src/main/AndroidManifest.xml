@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Isms">
         <activity
+            android:name=".students.TimeTable"
+            android:exported="false" />
+        <activity
             android:name=".students.ShowTimetable"
             android:exported="false" />
         <activity

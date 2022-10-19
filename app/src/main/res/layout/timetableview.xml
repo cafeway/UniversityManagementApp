@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white"
+    android:clickable="true"
+    android:elevation="20dp"
+    app:cardCornerRadius="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/venue"
+                android:layout_width="140dp"
+                android:layout_height="32dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="122dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Applied at"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="64dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="3dp"
+                app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+            <TextView
+                android:id="@+id/unitCode"
+                android:layout_width="133dp"
+                android:layout_height="31dp"
+                android:layout_below="parent"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="-38dp"
+                android:layout_marginEnd="160dp"
+                android:layout_marginBottom="122dp"
+                android:layout_toEndOf="@+id/imageView4"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Applied at"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="64dp"
+                android:layout_height="34dp"
+                android:layout_below="@id/imageView6"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="11dp"
+                app:srcCompat="@drawable/ic_baseline_person_24" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="111dp"
+                android:background="?android:attr/listDivider" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/lecturer"
+                app:chipCornerRadius="15dp"
+
+                android:layout_centerVertical="true"
+                android:foregroundGravity="center"
+                app:chipBackgroundColor="@color/green"
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="70dp"
+                android:layout_marginBottom="73dp"
+                android:background="@color/green"
+                android:gravity="center"
+                android:text="TextView"
+                 />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="64dp"
+                android:layout_height="47dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="254dp"
+                android:layout_marginBottom="11dp"
+                app:srcCompat="@drawable/ic_baseline_fingerprint_24" />
+
+            <TextView
+                android:id="@+id/signStatus"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="65dp"
+                android:layout_marginBottom="23dp"
+                android:gravity="center"
+                android:text="sign"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,15 +12,20 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33229166666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_show_timetable.xml" value="0.3076576576576577" />
         <entry key="app/src/main/res/layout/activity_show_units.xml" value="0.1437994722955145" />
+        <entry key="app/src/main/res/layout/activity_time_table.xml" value="0.16126126126126125" />
         <entry key="app/src/main/res/layout/background.xml" value="0.21105072463768115" />
         <entry key="app/src/main/res/layout/content_home_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/content_regisiter.xml" value="0.21105072463768115" />
         <entry key="app/src/main/res/layout/content_register.xml" value="0.21105072463768115" />
         <entry key="app/src/main/res/layout/dropdownlayout.xml" value="0.33229166666666665" />
+        <entry key="app/src/main/res/layout/recyclerviewlayout.xml" value="0.3076576576576577" />
         <entry key="app/src/main/res/layout/regisiter.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/register.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/sign_up.xml" value="0.21105072463768115" />
+        <entry key="app/src/main/res/layout/timetableview.xml" value="0.3076576576576577" />
+        <entry key="app/src/main/res/layout/unitsview.xml" value="0.3076576576576577" />
         <entry key="app/src/main/res/menu/bottom_nav_bar.xml" value="0.33229166666666665" />
         <entry key="app/src/main/res/menu/courses.xml" value="0.33229166666666665" />
       </map>
