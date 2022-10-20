@@ -17,10 +17,10 @@ class TimeTableAdapter (private  val context: Context,private val applications: 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val day = itemView.findViewById<TextView>(R.id.venue)
-        val unitCode = itemView.findViewById<TextView>(R.id.unitTitle)
-        val Lecturer_venue = itemView.findViewById<TextView>(R.id.chip)
-//        val done = itemView.findViewById<TextView>(R.id.DoneClassestext)
-//        val undone = itemView.findViewById<TextView>(R.id.UnDoneClassestext)
+        val unitCode = itemView.findViewById<TextView>(R.id.unitCode)
+        val Lecturer_venue = itemView.findViewById<TextView>(R.id.lecturer)
+        val done = itemView.findViewById<TextView>(R.id.DoneClasses)
+        val undone = itemView.findViewById<TextView>(R.id.RemainingClasses)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -29,11 +29,11 @@ class TimeTableAdapter (private  val context: Context,private val applications: 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.day.text = applications.get(position).Day
+        holder.day.text = applications.get(position).Venue
         holder.unitCode.text = applications.get(position).UnitCode
-        holder.Lecturer_venue.text = applications.get(position).toString()
-//        holder.done.text = applications.get(position).TotalClasses.toString()
-//        holder.undone.text = applications.get(position).RemainingClasses.toString()
+        holder.Lecturer_venue.text = applications.get(position).Lecturer.toString()
+        holder.done.text = applications.get(position).TotalClasses.toString()
+        holder.undone.text = applications.get(position).RemainingClasses.toString()
 
     }
 

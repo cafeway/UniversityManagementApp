@@ -17,6 +17,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="176dp"
+        android:elevation="20dp"
+        app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +60,6 @@
                 android:id="@+id/unitCode"
                 android:layout_width="133dp"
                 android:layout_height="31dp"
-                android:layout_below="parent"
                 android:layout_alignParentEnd="false"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="12dp"
@@ -86,47 +87,69 @@
                 android:layout_height="1dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="111dp"
-                android:background="?android:attr/listDivider" />
+                android:background="?android:attr/listDivider"
+                android:backgroundTint="@color/black" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/lecturer"
-                app:chipCornerRadius="15dp"
-
-                android:layout_centerVertical="true"
-                android:foregroundGravity="center"
-                app:chipBackgroundColor="@color/green"
                 android:layout_width="170dp"
+
                 android:layout_height="35dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginEnd="70dp"
-                android:layout_marginBottom="73dp"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="109dp"
+                android:layout_marginBottom="74dp"
                 android:background="@color/green"
+                android:foregroundGravity="center"
                 android:gravity="center"
                 android:text="TextView"
-                 />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="64dp"
-                android:layout_height="47dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="254dp"
-                android:layout_marginBottom="11dp"
-                app:srcCompat="@drawable/ic_baseline_fingerprint_24" />
+                app:chipBackgroundColor="@color/green"
+                app:chipCornerRadius="15dp" />
 
             <TextView
-                android:id="@+id/signStatus"
-                android:layout_width="150dp"
+                android:id="@+id/DoneClasses"
+                android:layout_width="119dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="65dp"
-                android:layout_marginBottom="23dp"
+                android:layout_marginEnd="192dp"
+                android:layout_marginBottom="25dp"
+                android:fontFamily="sans-serif-medium"
                 android:gravity="center"
-                android:text="sign"
+                android:text="TextView"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="28dp"
+                android:layout_marginBottom="24dp"
+                app:srcCompat="@drawable/ic_baseline_check_circle_outline_24" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="164dp"
+                android:layout_marginBottom="20dp"
+                app:srcCompat="@drawable/ic_baseline_pending_24" />
+
+            <TextView
+                android:id="@+id/RemainingClasses"
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="44dp"
+                android:layout_marginBottom="25dp"
+                android:gravity="center"
+                android:text="TextView"
                 android:textColor="@color/black" />
 
         </RelativeLayout>

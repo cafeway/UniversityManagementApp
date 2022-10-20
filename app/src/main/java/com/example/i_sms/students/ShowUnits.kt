@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.i_sms.R
 import com.example.i_sms.adapters.TimeTableAdapter
+import com.example.i_sms.adapters.UnitsAdapter
 import com.example.i_sms.api.StudentApi
 import com.example.i_sms.models.GetResponse
 import com.example.i_sms.models.UnitDetails
@@ -44,26 +45,18 @@ class ShowUnits : AppCompatActivity() {
         // create the get callback function that populates the data
 
         service.getUnits().enqueue(object: Callback<UnitDetails> {
-            override fun onResponse(call: Call<GetResponse>, response: Response<GetResponse>) {
-                recyclerView.adapter =
-                    response.body()?.let { TimeTableAdapter(this@ShowUnits, it.units) }
-            }
-
-            override fun onFailure(call: Call<GetResponse>, t: Throwable) {
-                TODO("Not yet implemented")
-            }
-
             override fun onResponse(call: Call<UnitDetails>, response: Response<UnitDetails>) {
-                TODO("Not yet implemented")
+                recyclerView.adapter =
+                    response.body()?.let { UnitsAdapter(this@ShowUnits, it.units) }
             }
 
             override fun onFailure(call: Call<UnitDetails>, t: Throwable) {
                 TODO("Not yet implemented")
             }
 
+
         })
 
 
     }
     }
-}
