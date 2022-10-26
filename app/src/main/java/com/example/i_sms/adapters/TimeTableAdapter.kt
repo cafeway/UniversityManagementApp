@@ -30,7 +30,7 @@ class TimeTableAdapter (private  val context: Context,private val applications: 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.day.text = applications.get(position).Venue
-        holder.unitCode.text = applications.get(position).UnitCode
+        holder.unitCode.text = applications.get(position).UnitCode // holder.unitcode.text = timetable[0].unitocde\
         holder.Lecturer_venue.text = applications.get(position).Lecturer.toString()
         holder.done.text = applications.get(position).TotalClasses.toString()
         holder.undone.text = applications.get(position).RemainingClasses.toString()

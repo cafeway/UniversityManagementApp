@@ -55,7 +55,8 @@ class TimeTable : AppCompatActivity() {
 
         // set a click listener that when clicked asks for biometric scan
         sign_button.setOnClickListener{
-            signUsingBiometrics()
+            val intent  = Intent(applicationContext,SignAttendance::class.java)
+            startActivity(intent)
         }
         // get recycler view by id
         var recyclerView:RecyclerView = findViewById(R.id.recyclerView)

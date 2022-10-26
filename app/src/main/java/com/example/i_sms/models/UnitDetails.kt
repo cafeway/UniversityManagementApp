@@ -6,5 +6,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class UnitDetails(
     @SerialName("units")
-    val units: ArrayList<unit>
+    val unit: ArrayList<unit>
 )

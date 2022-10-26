@@ -21,6 +21,6 @@ interface StudentApi {
     @GET("http://10.0.2.2:8000/api/getTimetable")
     fun getTimeTable():Call<GetResponse>
 
-    @GET("http://10.0.2.2:8000/api/getUnits")
+    @GET("https://i-sms.herokuapp.com/api/getUnits")
     fun getUnits():Call<UnitDetails>
 }

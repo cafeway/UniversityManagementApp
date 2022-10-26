@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".students.SignAttendance">
 
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:layout_width="match_parent"
+        android:id="@+id/scanner"
+        app:autoFocusButtonColor="@color/white"
+        app:autoFocusButtonVisible="true"
+        app:frameColor="@color/white"
+        app:frameCornersSize="50dp"
+        app:frameCornersRadius="10dp"
+        app:frameAspectRatioHeight="1"
+        app:frameAspectRatioWidth="1"
+        app:frameSize="0.75"
+        app:frameThickness="2dp"
+        app:maskColor="@color/green"
+
+        android:layout_height="match_parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

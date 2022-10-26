@@ -5,6 +5,11 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class unit(
-    @SerialName("unit")
-    val unit: String
+    @SerialName("UnitCode")
+    val UnitCode: String,
+
+    @SerialName("Unit")
+    val Unit: String
+
+
 )

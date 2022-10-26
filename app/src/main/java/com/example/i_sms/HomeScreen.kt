@@ -39,16 +39,16 @@ class HomeScreen : AppCompatActivity() {
             startActivity(intent)
         }
         //
-        val  cardView = findViewById<CardView>(R.id.card1)
-        cardView.setOnClickListener(){
-
-           val toast= Toast.makeText(applicationContext,"hwlll",Toast.LENGTH_LONG)
-            toast.show()
-            val intent = Intent(this,regisiter::class.java).apply {
-
-            }
-                startActivity(intent)
-        }
+//        val  cardView = findViewById<CardView>(R.id.card1)
+//        cardView.setOnClickListener(){
+//
+//           val toast= Toast.makeText(applicationContext,"hwlll",Toast.LENGTH_LONG)
+//            toast.show()
+//            val intent = Intent(this,regisiter::class.java).apply {
+//
+//            }
+//                startActivity(intent)
+//        }
     }
 
 
