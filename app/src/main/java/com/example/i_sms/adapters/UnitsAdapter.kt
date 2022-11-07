@@ -12,7 +12,7 @@ import com.example.i_sms.models.unit
 
 class UnitsAdapter (private val context: Context, private val units: ArrayList<unit>):
     RecyclerView.Adapter<UnitsAdapter.ViewHolder>() {
-
+    private val layoutInflater = LayoutInflater.from(context)
     private lateinit var mlistener: OnItemClickListener
 
     interface OnItemClickListener {
@@ -23,35 +23,37 @@ class UnitsAdapter (private val context: Context, private val units: ArrayList<u
         mlistener= listener
     }
 
-    private val layoutInflater = LayoutInflater.from(context)
-
-    class ViewHolder(itemView: View,listener: OnItemClickListener) : RecyclerView.ViewHolder(itemView){
+    class ViewHolder(itemView: View, listener: OnItemClickListener) :
+        RecyclerView.ViewHolder(itemView) {
         val unit = itemView.findViewById<TextView>(R.id.unitTitle)
-    //        init {
-    ////            itemView.setOnClickListener{
-    ////                listener.onItemClicked(adapterPosition)
-    ////            }
-    }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView =  layoutInflater.inflate(R.layout.unitsview,parent,false)
-        return ViewHolder(itemView,mlistener)
-    }
+        var Noteposition = 0
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.unit.text = units.get(position).UnitCode
+
+        init {
+            itemView.setOnClickListener{
+                listener.onItemClicked(adapterPosition)
+            }
+        }
+    }
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int,): ViewHolder {
+            val itemView = layoutInflater.inflate(R.layout.unitsview, parent, false)
+            return ViewHolder(itemView, mlistener)
+        }
+
+        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+            holder.unit.text = units.get(position).UnitCode
 //        holder.done.text = applications.get(position).TotalClasses.toString()
 //        holder.undone.text = applications.get(position).RemainingClasses.toString()
 
+            holder.Noteposition = position
+        }
 
+        override fun getItemCount(): Int {
+            return units.size
+        }
 
-    }
+    fun setOnItemClickListener(listener: UnitsAdapter.OnItemClickListener, function: () -> Unit) {
 
-    override fun getItemCount(): Int {
-        return  units.size
-    }
-
-    fun setOnItemClickListener() {
-        TODO("Not yet implemented")
     }
 }

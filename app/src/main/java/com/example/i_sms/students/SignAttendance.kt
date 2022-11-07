@@ -21,6 +21,7 @@ class SignAttendance : AppCompatActivity() {
         setContentView(R.layout.activity_sign_attendance)
 
         // check if the camera permmission is granted
+        scanQrCode()
 
     }
     private fun scanQrCode () {

@@ -49,11 +49,12 @@ class ShowUnits : AppCompatActivity() {
 
         service.getUnits().enqueue(object: Callback<UnitDetails> {
             override fun onResponse(call: Call<UnitDetails>, response: Response<UnitDetails>) {
-                adapter = response.body()?.unit?.let { UnitsAdapter(this@ShowUnits,it) }!!
+                adapter = response.body()?.units?.let { UnitsAdapter(this@ShowUnits,it) }!!
                 recyclerView.adapter = adapter
                 adapter.setOnItemClickListener(object : UnitsAdapter.OnItemClickListener{
                     override fun onItemClicked(positon: Int) {
                         Log.d("hell","sdsds")
+//                        Toast.makeText(applicationContext, "hey",Toast.LENGTH_SHORT).show()
                     }
 
                 })
